@@ -1,0 +1,84 @@
+:root {
+  --Purple: #270257;
+  --Yellow: #feb100;
+  --Black: #000000;
+  --White: #ffffff;
+  --Nav-button: rgba(255, 255, 255, 0.05);
+  --Nav-hover: rgba(255, 255, 255, 0.1);
+}
+html {
+  font-size: 62.5%;
+}
+
+header {
+  background: url(../images/library.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.nav-item {
+  color: var(--White);
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  margin: 2rem 2rem 0rem 0;
+  transition: 0.2s ease-in-out;
+}
+.nav-item:hover {
+  color: #fbe8b9;
+}
+
+.nav-item:hover {
+  transition: 0.2s;
+  transform: translateY(0.2rem);
+}
+
+.logo {
+  width: 30rem;
+  border-radius: 50%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.button {
+  text-decoration: none;
+  font-size: 3rem;
+  border-radius: 3rem;
+  padding: 1rem 2rem;
+}
+.button-brown {
+  background-color: #b87b43;
+  color: var(--White);
+}
+.button-brown:hover {
+  background-color: #b87b43;
+  color: #fbe8b9;
+  transform: translateY(0.2rem);
+  transition: 0.2s;
+}
+header .button {
+  margin-bottom: 5rem;
+}
+
+@media (max-width: 768px) {
+  header {
+    background: url(../images/mobile_library.jpg) no-repeat center center fixed;
+    background-size: cover;
+  }
+  .navbar {
+    flex-direction: column;
+  }
+  .logo {
+    width: 25rem;
+  }
+}
