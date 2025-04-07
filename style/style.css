@@ -1,15 +1,17 @@
 :root {
-  --Purple: #270257;
-  --Yellow: #feb100;
+  --brown: #b87b43;
+  --creame: #fbe8b9;
   --Black: #000000;
   --White: #ffffff;
+  --darkBrown: #6b4f2d;
+  --darkCreame: #e2c1a3;
   --Nav-button: rgba(255, 255, 255, 0.05);
   --Nav-hover: rgba(255, 255, 255, 0.1);
 }
 html {
   font-size: 62.5%;
 }
-
+/* header */
 header {
   background: url(../images/library.jpg) no-repeat center center fixed;
   background-size: cover;
@@ -19,6 +21,15 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+}
+
+.nav-item,
+a {
+  color: var(--White);
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  transition: 0.2s ease-in-out;
 }
 
 .navbar {
@@ -35,7 +46,7 @@ header {
   transition: 0.2s ease-in-out;
 }
 .nav-item:hover {
-  color: #fbe8b9;
+  color: var(--creame);
 }
 
 .nav-item:hover {
@@ -57,17 +68,160 @@ header {
   padding: 1rem 2rem;
 }
 .button-brown {
-  background-color: #b87b43;
+  background-color: var(--brown);
   color: var(--White);
 }
 .button-brown:hover {
-  background-color: #b87b43;
-  color: #fbe8b9;
+  color: var(--creame);
+  transform: translateY(0.2rem);
+  transition: 0.2s;
+}
+.button-yellow {
+  background-color: var(--creame);
+  color: var(--Black);
+}
+.button-yellow:hover {
+  color: var(--brown);
   transform: translateY(0.2rem);
   transition: 0.2s;
 }
 header .button {
   margin-bottom: 5rem;
+}
+
+/* main categories */
+main {
+  background-color: var(--brown);
+  padding: 2rem;
+}
+
+.book_categury h1 {
+  color: var(--White);
+  text-align: center;
+  padding: 2rem 0;
+}
+
+h1,
+h2 {
+  font-family: "Lobster", cursive;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.book_items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding-top: 2rem;
+  color: var(--White);
+}
+
+.book_item {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.book_item:hover {
+  transform: translateY(-5px);
+}
+
+.book_item_image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.book_item_text p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+/* comments */
+.comments {
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+}
+
+.comments h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.comment_items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding-top: 2rem;
+  color: var(--White);
+}
+
+.comment_item {
+  background-color: #e2c1a3;
+  border-radius: 5rem;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease-out;
+  color: #6b4f2d;
+}
+.comment_item:hover {
+  transform: translateY(-5px);
+}
+
+.comment_item_image {
+  width: 50%;
+  height: auto;
+  border-radius: 10rem;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.comment_item_text p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+.comment_item a {
+  color: #6b4f2d;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.comment_item a:hover {
+  color: var(--brown);
+  transition: 0.2s ease-in-out;
+}
+
+.comment_item h3 {
+  font-size: 1.5rem;
+}
+
+/* footer */
+footer,
+footer a,
+footer h3 {
+  background-color: #6b4f2d;
+  padding: 2rem;
+  color: var(--White);
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.content-photo {
+  width: 5%;
 }
 
 @media (max-width: 768px) {
@@ -80,5 +234,24 @@ header .button {
   }
   .logo {
     width: 25rem;
+  }
+  .button {
+    font-size: 2rem;
+    padding: 1rem 1.5rem;
+  }
+  h1,
+  h2 {
+    font-size: 2rem;
+  }
+  footer {
+    flex-direction: column;
+  }
+  footer h2 {
+    font-size: 2rem;
+  }
+  footer h3,
+  footer a {
+    font-size: 1.3rem;
+    font-weight: normal;
   }
 }
